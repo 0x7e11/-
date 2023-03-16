@@ -1,14 +1,20 @@
-qykcms_ 4.3.0\wwwroot\admin_ A vulnerability exists in the 645-657 line downfile() function in system  include  function.php, which uses file_ get_ Contents() reads $url, and then uses file_ put_ The contents() function performs a write operation, only determining whether the file exists, without filtering the file content, file source, and file suffix
+qykcms_4.3.0 Source code download address：
+
+http://api.qingyunke.com/qykcms/down/qykcms_4.3.0.zip
+
+Vulnerable file path:： \wwwroot\admin_system\include\function.php
+
+A vulnerability exists in line 645-657 downfile(), which uses file_ get_ Contents() reads $url, and then uses file_ put_ The contents() function performs a write operation, only determining whether the file exists, without filtering the file content, file source, and file suffix
 
 ![image](https://user-images.githubusercontent.com/79570367/225640907-2ebbd786-2b6c-449c-8619-c19e99e96f44.png)
 
 Global search downfile() function
-qykcms_ 4.3.0\wwwroot\admin_ system\include\lib\down.php
+qykcms_4.3.0\wwwroot\admin_system\include\lib\down.php
 Line 4 calls the downfile () function directly without filtering
 
 ![image](https://user-images.githubusercontent.com/79570367/225641018-066d9a7c-9580-4de8-9173-46c91c8d2352.png)
 
-Qykcms All background file operations are performed through  wwwroot  admin_ System  api.php. $tcz receives post data and generates an array
+Qykcms All background file operations are performed through  \wwwroot\admin_system\api.php. $tcz receives post data and generates an array
 
 ![image](https://user-images.githubusercontent.com/79570367/225641125-4116b2cb-6c60-4d09-8078-5b5549ced88d.png)
 
